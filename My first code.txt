@@ -1,0 +1,9 @@
+My first code.
+Updated.
+Adding Loop
+
+While (true)
+	keep doing;
+
+
+End;
