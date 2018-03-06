@@ -7,3 +7,5 @@ While (true)
 
 
 End;
+
+Adding feature1 call();
