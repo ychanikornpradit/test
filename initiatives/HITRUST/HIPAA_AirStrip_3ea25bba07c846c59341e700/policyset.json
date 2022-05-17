@@ -1,0 +1,115 @@
+{
+ "properties": {
+  "displayName": "HITRUST/HIPAA AirStrip",
+  "policyType": "Custom",
+  "description": "Custom policies to remediate HITRUST/HIPAA non-compliant resources.",
+  "metadata": {
+   "category": "HIPAA",
+   "parameterScopes": {
+    "StorageAccountID": "/subscriptions/f6763529-e15a-4073-9bf7-6037aa6ca4d9/resourcegroups/az-p01-if-rg",
+    "azureRegions": "/providers/Microsoft.Management/managementGroups/Airstrip"
+   },
+   "createdBy": "cfaf8445-ab11-4fe3-b502-a7b3466441fd",
+   "createdOn": "2022-05-04T19:15:48.186561Z",
+   "updatedBy": "cfaf8445-ab11-4fe3-b502-a7b3466441fd",
+   "updatedOn": "2022-05-17T20:29:49.680615Z"
+  },
+  "parameters": {
+   "Profile Name for Config": {
+    "type": "string",
+    "metadata": {
+     "displayName": "Profile Name for Config",
+     "description": null
+    },
+    "defaultValue": "HITRUST/HIPAA"
+   },
+   "StorageAccountID": {
+    "type": "string",
+    "metadata": {
+     "displayName": "StorageAccountID",
+     "description": null
+    },
+    "defaultValue": "azp01ifstdiagcasaoeastus"
+   },
+   "Allowed Locations": {
+    "type": "array",
+    "metadata": {
+     "displayName": "Allowed Locations",
+     "description": null,
+     "strongType": "location"
+    },
+    "defaultValue": []
+   }
+  },
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "HIPAA Diagnostic Settings Network Interface_1",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/Airstrip/providers/Microsoft.Authorization/policyDefinitions/0da528eb-704f-4141-b96a-ecb1c3647fb6",
+    "parameters": {
+     "profileName": {
+      "value": "[parameters('Profile Name for Config')]"
+     },
+     "StorageAccountID": {
+      "value": "[parameters('StorageAccountID')]"
+     },
+     "azureRegions": {
+      "value": "[parameters('Allowed Locations')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "HIPAA Diagnostic Settings Virtual Machines_1",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/Airstrip/providers/Microsoft.Authorization/policyDefinitions/a2f1a8ef-8cb0-490f-b262-58d6784e4b72",
+    "parameters": {
+     "profileName": {
+      "value": "[parameters('Profile Name for Config')]"
+     },
+     "StorageAccountID": {
+      "value": "[parameters('StorageAccountID')]"
+     },
+     "azureRegions": {
+      "value": "[parameters('Allowed Locations')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "HIPAA Diagnostic Settings Vaults_1",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/Airstrip/providers/Microsoft.Authorization/policyDefinitions/b533988c-b22b-4c58-8e54-b6260678579d",
+    "parameters": {
+     "profileName": {
+      "value": "[parameters('Profile Name for Config')]"
+     },
+     "StorageAccountID": {
+      "value": "[parameters('StorageAccountID')]"
+     },
+     "azureRegions": {
+      "value": "[parameters('Allowed Locations')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "HIPAA Diagnostic Settings ASE_1",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/Airstrip/providers/Microsoft.Authorization/policyDefinitions/f9d521d9-f8c3-45e6-84b9-41f1920b03b2",
+    "parameters": {
+     "profileName": {
+      "value": "[parameters('Profile Name for Config')]"
+     },
+     "StorageAccountID": {
+      "value": "[parameters('StorageAccountID')]"
+     },
+     "azureRegions": {
+      "value": "[parameters('Allowed Locations')]"
+     }
+    },
+    "groupNames": []
+   }
+  ],
+  "policyDefinitionGroups": []
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/Airstrip/providers/Microsoft.Authorization/policySetDefinitions/3ea25bba07c846c59341e700",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "3ea25bba07c846c59341e700"
+}
