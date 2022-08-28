@@ -1,0 +1,9 @@
+{
+	"name": "yc-okland-df",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "51f105df-524f-4f5c-908a-64b14681e700",
+		"tenantId": "47f4b28a-a4ad-44fc-9fdd-f2dde0ef40c8"
+	}
+}
