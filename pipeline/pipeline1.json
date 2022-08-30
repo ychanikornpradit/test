@@ -16,14 +16,11 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "JsonSource",
+						"type": "ParquetSource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": true,
 							"enablePartitionDiscovery": false
-						},
-						"formatSettings": {
-							"type": "JsonReadSettings"
 						}
 					},
 					"sink": {
@@ -37,7 +34,7 @@
 						"mappings": [
 							{
 								"source": {
-									"path": "$['ProjectNumber']"
+									"name": "ProjectNumber"
 								},
 								"sink": {
 									"name": "ProjectNumber"
@@ -45,18 +42,23 @@
 							},
 							{
 								"source": {
-									"path": "$['ProjectName']"
+									"name": "ProjectName"
 								},
 								"sink": {
 									"name": "ProjectName"
 								}
 							}
-						]
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
 					}
 				},
 				"inputs": [
 					{
-						"referenceName": "Json1",
+						"referenceName": "Parquet1",
 						"type": "DatasetReference"
 					}
 				],
