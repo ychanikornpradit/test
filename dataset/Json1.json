@@ -13,39 +13,6 @@
 				"relativeUrl": "golddatasets/project-master-list.parquet.as.json"
 			}
 		},
-		"schema": {
-			"type": "object",
-			"properties": {
-				"Projects": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"properties": {
-							"ProjectNumber": {
-								"type": "string"
-							},
-							"SageActive": {
-								"type": "boolean"
-							},
-							"ProjectName": {
-								"type": "string"
-							},
-							"OrignialContract": {
-								"type": "integer"
-							},
-							"ChangeOrders": {
-								"type": "integer"
-							},
-							"ProjectValue": {
-								"type": "integer"
-							},
-							"FinalPaymentCompleted": {
-								"type": "string"
-							}
-						}
-					}
-				}
-			}
-		}
+		"schema": {}
 	}
 }
