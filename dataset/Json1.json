@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "HttpServerLocation",
-				"relativeUrl": "project-master-list.parquet.as.json"
+				"relativeUrl": "golddatasets/project-master-list.parquet.as.json"
 			}
 		},
 		"schema": {
