@@ -28,7 +28,7 @@
 						"writeBatchSize": 10,
 						"writeBehavior": "upsert",
 						"ignoreNullValues": false,
-						"alternateKeyName": "cr417_projectnumber"
+						"alternateKeyName": "cr417_projectnumberkey"
 					},
 					"enableStaging": false,
 					"translator": {
