@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "Copy Project Data",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -19,14 +19,16 @@
 						"type": "ParquetSource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
-							"recursive": true,
+							"recursive": false,
 							"enablePartitionDiscovery": false
 						}
 					},
 					"sink": {
 						"type": "CommonDataServiceForAppsSink",
 						"writeBatchSize": 10,
-						"writeBehavior": "upsert"
+						"writeBehavior": "upsert",
+						"ignoreNullValues": false,
+						"alternateKeyName": "ProjectNumber"
 					},
 					"enableStaging": false,
 					"translator": {
@@ -34,18 +36,178 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "ProjectNumber"
+									"name": "ProjectNumber",
+									"type": "String",
+									"physicalType": "UTF8"
 								},
 								"sink": {
-									"name": "ProjectNumber"
+									"name": "cr417_projectnumber",
+									"type": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "ProjectName"
+									"name": "SageActive",
+									"type": "Boolean",
+									"physicalType": "BOOLEAN"
 								},
 								"sink": {
-									"name": "ProjectName"
+									"name": "cr417_sageactive",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "ProjectName",
+									"type": "String",
+									"physicalType": "UTF8"
+								},
+								"sink": {
+									"name": "cr417_projectname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ProjectValue",
+									"type": "Int32",
+									"physicalType": "INT32"
+								},
+								"sink": {
+									"name": "cr417_projectvalue",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Stage",
+									"type": "String",
+									"physicalType": "UTF8"
+								},
+								"sink": {
+									"name": "cr417_stage",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ProjectType",
+									"type": "String",
+									"physicalType": "UTF8"
+								},
+								"sink": {
+									"name": "cr417_projecttype",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Active",
+									"type": "Boolean",
+									"physicalType": "BOOLEAN"
+								},
+								"sink": {
+									"name": "cr417_active",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "Office",
+									"type": "String",
+									"physicalType": "UTF8"
+								},
+								"sink": {
+									"name": "cr417_office",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "OfficeId",
+									"type": "Int16",
+									"physicalType": "INT_16"
+								},
+								"sink": {
+									"name": "cr417_officeid",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Description",
+									"type": "String",
+									"physicalType": "UTF8"
+								},
+								"sink": {
+									"name": "cr417_description",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Director",
+									"type": "String",
+									"physicalType": "UTF8"
+								},
+								"sink": {
+									"name": "cr417_director",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DirectorId",
+									"type": "Int64",
+									"physicalType": "INT64"
+								},
+								"sink": {
+									"name": "cr417_directorid",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Executive",
+									"type": "String",
+									"physicalType": "UTF8"
+								},
+								"sink": {
+									"name": "cr417_executive",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ExecutiveId",
+									"type": "Int64",
+									"physicalType": "INT64"
+								},
+								"sink": {
+									"name": "cr417_executiveid",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "ProjectManager",
+									"type": "String",
+									"physicalType": "UTF8"
+								},
+								"sink": {
+									"name": "cr417_name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ProjectManagerID",
+									"type": "Int64",
+									"physicalType": "INT64"
+								},
+								"sink": {
+									"name": "cr417_managerid",
+									"type": "Int32"
 								}
 							}
 						],
