@@ -209,6 +209,16 @@
 									"name": "cr417_managerid",
 									"type": "Int32"
 								}
+							},
+							{
+								"source": {
+									"name": "FinalPaymentCompleted",
+									"type": "DateTime",
+									"physicalType": "DATE"
+								},
+								"sink": {
+									"name": "cr417_FinalPaymentCompleted"
+								}
 							}
 						],
 						"typeConversion": true,
