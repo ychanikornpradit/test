@@ -80,17 +80,6 @@
 							},
 							{
 								"source": {
-									"name": "Stage",
-									"type": "String",
-									"physicalType": "UTF8"
-								},
-								"sink": {
-									"name": "cr417_stage",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
 									"name": "ProjectType",
 									"type": "String",
 									"physicalType": "UTF8"
@@ -135,6 +124,17 @@
 							},
 							{
 								"source": {
+									"name": "Stage",
+									"type": "String",
+									"physicalType": "UTF8"
+								},
+								"sink": {
+									"name": "cr417_stage",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
 									"name": "Description",
 									"type": "String",
 									"physicalType": "UTF8"
@@ -142,6 +142,17 @@
 								"sink": {
 									"name": "cr417_description",
 									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FinalPaymentCompleted",
+									"type": "DateTime",
+									"physicalType": "DATE"
+								},
+								"sink": {
+									"name": "cr417_finalpaymentcompleted",
+									"type": "DateTime"
 								}
 							},
 							{
@@ -186,38 +197,6 @@
 								"sink": {
 									"name": "cr417_executiveid",
 									"type": "Int32"
-								}
-							},
-							{
-								"source": {
-									"name": "ProjectManager",
-									"type": "String",
-									"physicalType": "UTF8"
-								},
-								"sink": {
-									"name": "cr417_name",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "ProjectManagerID",
-									"type": "Int64",
-									"physicalType": "INT64"
-								},
-								"sink": {
-									"name": "cr417_managerid",
-									"type": "Int32"
-								}
-							},
-							{
-								"source": {
-									"name": "FinalPaymentCompleted",
-									"type": "DateTime",
-									"physicalType": "DATE"
-								},
-								"sink": {
-									"name": "cr417_FinalPaymentCompleted"
 								}
 							}
 						],
